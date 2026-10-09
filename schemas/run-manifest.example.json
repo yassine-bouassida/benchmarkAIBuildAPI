@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1-draft",
+  "run_id": "rust-baseline-01",
+  "language": "rust",
+  "condition": "baseline",
+  "protocol_revision": "UNFROZEN",
+  "prompt_sha256": null,
+  "skill_pack_sha256": null,
+  "agent_tool": "codex",
+  "agent_version": null,
+  "model": null,
+  "reasoning_effort": null,
+  "mode": "subscription_cli_unverified",
+  "framework": null,
+  "framework_version": null,
+  "compiler_version": null,
+  "os": null,
+  "hardware": {
+    "cpu": null,
+    "ram_gb": null
+  },
+  "container_image_digest": null,
+  "git_commit": null,
+  "seed": null,
+  "started_at": null,
+  "ended_at": null,
+  "network_policy": null,
+  "human_interventions": []
+}
