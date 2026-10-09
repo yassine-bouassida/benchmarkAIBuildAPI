@@ -1,0 +1,33 @@
+{
+  "run_id": "rust-baseline-01",
+  "status": "not_run",
+  "termination_reason": null,
+  "correctness": {
+    "passed": null,
+    "failed": null,
+    "not_run": null
+  },
+  "performance": {
+    "p50_ms": null,
+    "p95_ms": null,
+    "p99_ms": null,
+    "throughput_rps": null,
+    "peak_rss_mb": null
+  },
+  "development": {
+    "wall_time_seconds": null,
+    "compile_attempts": null,
+    "tool_calls": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "cached_tokens": null,
+    "token_source": null
+  },
+  "money": {
+    "api_billed_usd": null,
+    "infrastructure_usd": null,
+    "subscription_monthly_usd_context_only": null,
+    "per_run_cost_missing_reason": "not_measured"
+  },
+  "notes": "Example schema only: no experiment executed."
+}
