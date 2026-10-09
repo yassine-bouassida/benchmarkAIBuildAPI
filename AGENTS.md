@@ -41,3 +41,7 @@ For each run retain a run ID, condition, assigned agent/model, prompt/skill hash
 
 ## Skills fairness
 Maintain a reviewed, version-pinned skill manifest per experimental condition. Baseline runs receive no enhanced language-specific skill material; enhanced runs receive only their predefined allowed bundle. Agents may suggest new skills, but PM reviews provenance, safety and comparability and records proposals separately. No skill discovery, installation or prompt adjustment during measured runs unless explicitly included in all relevant conditions by a frozen protocol.
+
+## Model selection for experiments
+
+Use the model and reasoning-effort configuration of the owner's launching session as the selected model for the experiment. Each independently initialized implementation run must be configured to use that same model and effort settings, and the exact identifier/version (when available) must be recorded with the results. Do not silently fall back to a different model. If the runner cannot enforce the same model, stop that run and report it as ineligible for the matched comparison. Freeze the selected model/configuration for a comparable pilot or scored batch; if a future session is launched with a different model, start a separately identified batch rather than mixing results. This instruction does not make model inheritance automatic in runners that lack the capability.
