@@ -1,7 +1,7 @@
 # Repository-wide instructions for AI coding agents
 
 ## Goal
-Design and eventually run a fair, reproducible experiment comparing AI-built Rust, Scala 3 and C# backends. **Do not** implement a production sports community application here.
+Design and eventually run a fair, reproducible experiment comparing AI-built Rust, Scala 3, C#, Python, JavaScript (Node.js) and Java backends. **Do not** implement a production sports community application here.
 
 ## Source of truth
 Read `README.md`, `docs/experiment-protocol.md`, `docs/functional-spec.md`, `docs/evaluation.md`, `docs/cost-and-telemetry.md`, and `docs/skills-policy.md` before proposing experiments. Treat these as **draft** until the owner approves and tags a frozen protocol.
@@ -32,7 +32,7 @@ Review the protocol with `prompts/codex-design-review.md`. Find missing decision
 ## Benchmark coordination and preflight
 Use a **Project Manager / experiment coordinator** as the default coordinating role. It tracks GitHub Issues, proposed protocol revisions, run schedules, dependencies, blockers, preflight evidence and experiment outcomes. It may coordinate setup, but must not provide different implementation advice or unplanned assistance to particular language runs. It may only launch runs if actual runner support exists; these instructions do not install an orchestrator.
 
-Before any timed implementation run, the PM and a separate environment/setup agent must complete the reproducible environment-readiness checklist in [docs/environment-readiness.md](docs/environment-readiness.md). Preinstall and verify pinned Rust, Scala 3/JDK, and .NET SDK toolchains, framework prerequisites, build tools and required dependencies across equivalent isolated environments. Prepare caches/images before timing; do not charge one candidate for initial compiler/SDK installation. Record exact versions, image digests, checks, and environment differences. A failed preflight blocks the run.
+Before any timed implementation run, the PM and a separate environment/setup agent must complete the reproducible environment-readiness checklist in [docs/environment-readiness.md](docs/environment-readiness.md). Preinstall and verify pinned Rust, Scala 3/JDK, .NET SDK, Python, Node.js and Java/JDK toolchains, framework prerequisites, build tools and required dependencies across equivalent isolated environments. Prepare caches/images before timing; do not charge one candidate for initial compiler/SDK installation. Record exact versions, image digests, checks, and environment differences. A failed preflight blocks the run.
 
 **Measurement boundary:** Environment preparation and dependency provisioning are separately timed and logged as setup, not agent implementation time. Start the measured agent clock only once the specified environment and initial inputs are ready; use the same treatment for all conditions. Agents may fetch ordinary project dependencies only under a predeclared symmetric policy; record any run-time dependency downloads or tool repairs separately and mark protocol deviations. Do not silently repair only one candidate.
 
