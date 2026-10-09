@@ -1,6 +1,6 @@
 # AI Backend Build Benchmark
 
-A public, reproducible experiment studying **AI-assisted backend engineering** in **Rust, Scala 3, and C# / ASP.NET Core**.
+A public, reproducible experiment studying **AI-assisted backend engineering** in **Rust, Scala 3, C# / ASP.NET Core, Python, JavaScript (Node.js), and Java**.
 
 > **Status: methodology and specification draft — no language results, costs, or performance claims yet.**
 
@@ -15,7 +15,7 @@ The subject is **the combination of model, tools, instructions, framework, and l
 
 ## Intended design
 
-- Candidates: Rust, Scala 3, C#.
+- Candidates: Rust, Scala 3, C#, Python, JavaScript (Node.js), Java. Frameworks and runtime versions will be pinned during protocol review.
 - Conditions: **baseline** (common instructions and standard toolchain/docs) and **skills-enhanced** (curated, versioned language-specific guidance).
 - Pilot: one isolated run per candidate/condition before committing to a larger study.
 - Main study (proposed): five independent runs per language/condition, conditional on pilot feasibility.
@@ -35,6 +35,7 @@ A simplified sports community backend: private groups, multiple roles and permis
 - [Functional specification](docs/functional-spec.md) — required behavior and state transitions.
 - [Evaluation plan](docs/evaluation.md) — gates, metrics, load tests, failure definitions.
 - [Cost and telemetry](docs/cost-and-telemetry.md) — what we can and cannot measure.
+- [Environment readiness](docs/environment-readiness.md) — prepared runtime images and toolchain preflight.
 - [Skill policy](docs/skills-policy.md) — baseline vs curated skills.
 - [Codex handoff](prompts/codex-design-review.md) — first external design-review prompt.
 - [Run manifest example](schemas/run-manifest.example.json) — reproducibility metadata.
