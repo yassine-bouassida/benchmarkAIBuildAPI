@@ -1,0 +1,19 @@
+# local secrets / runtime
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+__pycache__/
+.pytest_cache/
+node_modules/
+target/
+bin/
+obj/
+.gradle/
+.idea/
+.vscode/
+.DS_Store
+# generated raw logs may contain private data; publish only redacted approved exports
+raw-private-logs/
+results/private/
