@@ -3,7 +3,7 @@
 ## Research unit and scope
 Each **run** is an independently initialized coding-agent session tasked with implementing one technology-neutral sports-community backend contract in a specific language/framework. A run is not one compiler invocation. The primary outcome is acceptance under a **predeclared fixed budget/termination policy**. Completion effort and runtime quality are secondary outcomes.
 
-Candidates (initial): Rust, Scala 3, C#/.NET. Proposed frameworks must be declared before the experiment begins; framework selection is itself a confounder and should be reported explicitly.
+Candidates (proposed): Rust, Scala 3, C#/.NET, Python, JavaScript (Node.js), Java/JVM. Proposed frameworks must be declared before the experiment begins; framework selection is itself a confounder and should be reported explicitly.
 
 ## Conditions
 - **Baseline:** identical neutral requirements, identical agent role/prompt shape, ordinary pinned development toolchains and allowed documentation, no curated language skill packages.
@@ -13,11 +13,11 @@ Candidates (initial): Rust, Scala 3, C#/.NET. Proposed frameworks must be declar
 
 ## Sequence
 1. Design neutral functional spec, wire/API behavior, workload profiles, security expectations, and tests.
-2. Select and document framework/toolchain/DB versions, shared PostgreSQL version, agent/model version, execution mode, permissions, network policy, and hardware.
+2. Select and document framework/toolchain/DB versions, shared PostgreSQL version, agent/model version, execution mode, permissions, network policy, and hardware. Provision and verify all toolchains, dependencies and equivalent environment images before measured coding begins; see environment-readiness.md.
 3. Implement evaluator independently; freeze evaluation version/hash and hold out test scenarios.
 4. Pilot each condition/candidate; fix measurement or ambiguous specification flaws and version changes before the main experiment.
 5. Start each main run from an identical clean **language-specific starter**. If starter sizes vary, disclose exact boilerplate; consider a no-starter sensitivity test.
-6. Assign randomized run order/identifiers; repeat ideally 5 times per language/condition (30 main runs if 3 languages x 2 conditions x 5 repetitions).
+6. Assign randomized run order/identifiers; repeat ideally 5 times per language/condition (60 main runs if 6 languages x 2 conditions x 5 repetitions).
 7. Stop according to predetermined policy; don't rescue failed runs by changing requirements.
 8. Run functional tests and isolated performance tests. Aggregate by language/condition, show distributions and uncertainties, not one global score.
 
@@ -39,7 +39,7 @@ Publish prompts, manifests, tested commits, raw aggregate metrics and scripts wh
 ## Pending decisions
 - Execution path for Codex subscription-supported CLI versus API, and whether usage events are available.
 - Exact agent version/model, reasoning setting, prompt template, run budget and stop rules.
-- Framework choices and dependency policies for Rust, Scala and C#.
+- Framework choices and dependency policies for Rust, Scala, C#, Python, JavaScript/Node.js and Java.
 - API spec details and neutral WebSocket message protocol.
 - Evaluator runner and load-generator language, anti-cheating boundary, hidden test design.
 - Skill pack sourcing, audits and versioning.

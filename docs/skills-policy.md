@@ -3,12 +3,15 @@
 ## Two comparable conditions
 **Baseline**: same neutral task prompt, evaluator description, tools and permitted docs; no curated language-specific skill folder. Standard installed toolchains and ordinary official documentation remain available under a controlled retrieval policy.
 
-**Enhanced**: same task/prompt plus curated, version-pinned language-specific instructions for Rust, Scala 3, or C#. Record each skill's title, source URL/commit, revision, file hash, commands, dependencies, and review status.
+**Enhanced**: same task/prompt plus curated, version-pinned language-specific instructions for Rust, Scala 3, C#, Python, JavaScript/Node.js, or Java. Record each skill's title, source URL/commit, revision, file hash, commands, dependencies, and review status.
 
 ## Candidate skill areas
 - Rust: Cargo, rustfmt, Clippy, async runtime, selected web framework, SQL client, tests.
 - Scala 3: build tool, formatter, linter, selected HTTP/WebSocket stack, persistence and tests.
 - C#: .NET SDK, formatting, analyzers, selected ASP.NET Core stack, database/test setup.
+- Python: pinned Python interpreter, dependency manager, formatter/linter, ASGI framework, database adapter and tests.
+- JavaScript (Node.js): pinned Node.js/runtime and package manager, formatter/linter, HTTP/WebSocket stack, database layer and tests.
+- Java: pinned JDK, build tool, formatter/linter, selected backend framework, database layer and tests.
 
 Do not present these as preinstalled. Select exact stacks during protocol review and document their versions.
 
